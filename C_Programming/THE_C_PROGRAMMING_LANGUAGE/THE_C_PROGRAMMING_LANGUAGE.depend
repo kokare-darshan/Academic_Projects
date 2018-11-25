@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1538295437 source:/home/dk/git/THE_C_PROGRAMMING_LANGUAGE/1.5.1a.c
+	<stdio.h>
+
+1538295914 source:/home/dk/git/THE_C_PROGRAMMING_LANGUAGE/1.5.1e1-6.c
+	<stdio.h>
+
+1538295840 source:/home/dk/git/THE_C_PROGRAMMING_LANGUAGE/main.c
+	<stdio.h>
+
+1538295845 source:/home/dk/git/THE_C_PROGRAMMING_LANGUAGE/t1.c
+
