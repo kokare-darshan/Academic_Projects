@@ -1,0 +1,686 @@
+Chapter – 1
+                                  INTRODUCTION
+Rice is the most important and widely grown food crop in the world. It is the staple food of more than 65 percent of the world population. Rice is mainly produced and consumed in the Asian region. India has the largest area under rice in the world and ranks second in the production after china. It has also emerged as a major rice consumer. Rice is primarily a high energy calorie food. The major content of rice consists of carbohydrate in the form of starch, which is about 72-75 percent of the total grain composition. In India to overcome the need of ever-increasing population it is necessary to make advancement in agricultural sector. Due to automation need of high quality and safety standards achieved with accurate, fast and cost effective quality determination of agricultural goods. Quality check is of great importance in the Grain industry because after harvesting, based on quality parameter a grain product has been sorted and graded according to the standards.
+
+1.1 Purpose of the Project:
+Agricultural field is one which can benefit a lot from the advances in technology. There is a large variety of rice harvested each year. The varieties can be differentiated by the farmers or individuals with knowledge related to the agricultural field. However, to the common people, the differentiation of grain types based on their looks is very difficult and such a task invites a large scope of error. Also, vendors can be fooled by claims of variety or quality of a particular type of grain to be of a higher grade than it actually is. The task of recognizing the type of grain becomes tedious and troublesome because the ultimate buyer i.e. consumer, needs to be able to purchase exactly the type of grain they require.
+
+Quality of grains is a vital prerequisite for today’s souk, to prevent the individual from getting charged for lower quality grains at a higher cost. Even if the person, is able to identify the variety, the quality is something that is much more difficult. The reason for this is the fact that commoners are not used to identify the quality and hence the vendors take advantage of this disability of the consumer.
+
+1.2 Approach for this project:
+Segregating these grains can be simplified by the use of technology. The grains (rice, used in this project), have their own variations of features such as texture, shape and color corresponding to the variety. This fact can be used to determine the variety and quality of the grain by analysing the individual features and formulating a method to then classify the grains on the grounds of the features extracted.
+The analysis is carried out by capturing an image of the grains and giving it as an input to the Software to obtain results. The Software computes the features, classifies the given input and displays the type of the grain in a Display Box.
+Here, in this paper, we use image processing to detect the variety of rice and estimate their quality. The procedure can be separated into different parts namely, Image Acquisition, Feature Extraction and Classification.
+1.3 Description of the Project:
+The project has incorporated different tools in the field of image processing for analysis of features of the images. From the varied range of choices available, each methodology was considered, compared and then the most apt one was incorporated in the software.
+The main steps involved in the procedure are Image Acquisition, Image Pre-processing, Feature Extraction and Classification.
+1.3.1 Image Acquisition:
+The image is taken using a competent digital camera and stored in the same folder as that of the software, i.e. Test folder. The image of the grains has to be captured from a fixed distance. This is the initial step of the Procedure and needs to be carried out with utmost care as this is the only step involving human work and hence care should be taken to avoid any errors. 
+1.3.2 Image Pre-processing:
+The image to be operated needs to be compatible for further operations. Therefore, we carry out some operations known as pre-processing to make it simpler for the software to extract the features precisely. The pre-processing operations involve Image Resizing, and Gray-scaling.
+1.3.2.1 Image Resizing:
+The image is resized i.e. the resolution is varied to match the requirements of the feature extraction tools. The image obtained is not altered or truncated in any way but only compressed to fit a particular resolution. Thus, no part of the image is lost or omitted in this process.
+1.3.2.2 Gray-Scaling:
+Gray-Scaling of the image is limited to use only for variety detection. The quality estimation uses color images itself for features extraction. This process transforms a colored image into a gray image. There are many advantages of operating on gray scale image rather than a colored image, which is explained in detail in further chapters.
+1.3.3 Feature Extraction:
+In image processing, feature extraction starts from an initial set of measured data and builds derived values intended to be informative, non-redundant, facilitating the subsequent learning and generalization steps, in some cases leading to better human interpretations. When the input data is too large to be processed and it is suspected to be redundant, then it can be transformed into a reduced set of features. This process is called feature extraction. The extracted features are expected to contain the relevant information from the input data, so that the desired task can be performed by using this reduced representation instead of the complete initial data.
+Feature extraction is the process of defining a set of features, or image characteristics, which will most efficiently or meaningfully represent the information that is important for analysis and classification. The different processes that are used in this project are Canny Edge Detection, GLCM texture analysis and RGB Histogram.
+1.3.3.1 Canny Edge Detection:
+The Canny edge detector is an edge detection operator that uses a multi-stage algorithm to detect a wide range of edges in images. Edge detection, especially step edge detection has been widely applied in various different computer vision systems, which is an important technique to extract useful structural information from different vision objects and dramatically reduce the amount of data to be processed. Canny has found that, the requirements for the application of edge detection on diverse vision systems are relatively the same. Thus, a development of an edge detection solution to address these requirements can be implemented in a wide range of situations.
+1.3.3.2 GLCM Texture Analysis:
+A statistical method of examining texture that considers the spatial relationship of pixels is the gray-level co-occurrence matrix (GLCM), also known as the gray-level spatial dependence matrix. The GLCM functions characterize the texture of an image by calculating how often pairs of pixel with specific values and in a specified spatial relationship occur in an image, creating a GLCM, and then extracting statistical measures from this matrix.
+1.3.3.3 RGB Histogram:
+In image processing and photography, a color histogram is a representation of the distribution of colors in an image. For digital images, a color histogram represents the number of pixels that have colors in each of a fixed list of color ranges that span the image's color space, the set of all possible colors. The information feature obtained from the Histogram is then used for classification.
+1.3.4 Classification:
+Classification includes a broad range of decision-theoretic approaches to the identification of images (or parts thereof). All classification algorithms are based on the assumption that the image in question depicts one or more features and that each of these features belongs to one of several distinct and exclusive classes. Classification algorithms typically employ two phases of processing: training and testing. In the initial training phase, characteristic properties of typical image features are isolated and, based on these, a unique description of each classification category, i.e. training class, is created. In the subsequent testing phase, these feature-space partitions are used to classify image features. The classification algorithm implemented here is Artificial Neural Network (ANN).
+Artificial Neural Network:
+Artificial neural networks (ANNs) are a family of statistical learning models inspired by biological neural networks (the central nervous systems of animals, in particular the brain) and are used to estimate or approximate functions that can depend on a large number of inputs and are generally unknown. Artificial neural networks are generally presented as systems of interconnected "neurons" which send messages to each other. The connections have numeric weights that can be tuned based on experience, making neural nets adaptive to inputs and capable of learning.
+1.4. Outline of the Project
+After the introduction, Chapter-2 is Literature Survey, where the papers referred to carry out this project along with its details are listed. Chapters- 3, 4, 5 describes GLCM Feature Extraction, Canny Edge Detection and Color Histogram respectively which are the various feature extraction methods used in this project.Chapter-6 details the concept of Artificial Neural Network (ANN) which is the essence of this project where the images are trained and classified. Chapter-7 gives the flow of this project. Chapter-8 displays all the intermediate results along with various plots and the final result. Chapter-9 concludes the purpose of this project. Chapter-10 discusses the Future Scope, further modifications or future work that can be carried out as an extension to this project.
+Chapter - 2
+LITERATURE SURVEY
+    • Analysis of Rice Granules using Image Processing and Neural Network Pattern Recognition Tool, IJCA June 2014, Abirami S, Neelamegam P, Kala H
+The paper presents investigation performed on basmati rice granules to extract the features from the images and grade the granules on the basis of the features. The methods used are canny edge detection and for the feature extraction, Open Source Computer Vision is used. The morphological features are given to Neural Network Pattern Recognition Tool and classification is done on the basis of the features. The things that can be learnt from this paper and used in out paper is the technique of implementation. The paper has been useful in understanding the constraints and hence inducing us to formulate different ways of implementing our methods. The processing of imagery and the vigilant assortment of the variety measured in this effort for extracting features from rice granules significantly abridged the intricacy of the grading problem. Neural Network Pattern Recognition Tool is lucratively applied in grading rice granules. The developed Neural Network can be adapted for grading added grains and foodstuffs as well. 
+
+    • Introduction to Neural Networks using MATLAB 6.0, S N Sivanandam, S Sumathi, S N Deepa, June 2002, Tata McGraw Hill Education Private Limited
+The textbook mentioned above has been used to gain insight into the Neural Network working and applications. As explained in the project, Neural Networks has been used as the classification platform of the rice granules on the basis of features extracted. The various types of Neural Networks have been explained in the above textbook and this has allowed us to compare and take a decision as to which of the pattern recognition algorithms will be efficient as per our requirements. The project uses Feed Forward Network along with Back Propagation to make the decision. Choosing the type of Neural Network was done after rigorous comparison of merits and demerits of other networks. Chapter 6, gives a deeper insight into the why the particular network was chosen, and this credit can be given to knowledge provided by the above mentioned text book.
+
+    • John Canny. A computational approach to edge detection. Pattern Analysis and Machine Intelligence, IEEE, Nov. 1986.
+The purpose of edge detection in general is to significantly reduce the amount of data in an image, while preserving the structural properties to be used for further image processing. Several algorithms exists, but the one explained by John Canny has been widely accepted for edge detection as the standard edge detection method and is used in research on a large extent. The reduction in amount of information of an image increases the efficiency of further image processing operations. This is advantageous to obtain results with lesser time for processing and accurately at the same time. The information provided in the paper has been utilized by us in the use of feature extraction, shape features to be precise. The Canny Edge detection is a step by step process and the explanation is provided in Chapter 4.
+
+    • Image Texture Feature Extraction using GLCM Approach, IJSRP Vol.3 Issue 5, May 2013, P Mohanaiah, P Sathyanarayana, L GuruKumar 
+The Gray Level Co-occurrence Matrix (GLCM) method is used for extracting four Statistical Texture Parameters i.e., Entropy, Inverse Difference Moment, Angular Second Moment and Correlation. By extracting the features of an image by GLCM approach, the image compression time can be greatly reduced in the process of converting RGB to Gray level image. The Paper has been instrumental to our project as it provided the base for texture feature extraction using a simple yet efficient approach. The operation involves a number of equations, which combined with the original image, produce results that are satisfactory. The GLCM is a simple matrix that can be generated in MATLAB with relative ease using in-built commands. Also, it allows us to operate on Gray-Level images which in itself provides advantages like noise reduction and hence much easier feature extraction. The entire summary of GLCM method for texture feature extraction is explained in Chapter 3.
+
+    • RGB Color Histogram Feature based Image Classification, Shailendra Singh, Samsung India Software Center, Noida, India
+The above paper, is unique, in its use of RGB Color histogram as features to be used for classification of different themes. The Color Histogram most discerning RGB Color Parameters which are then used as information features fed to the Neural Network for Classification. A forms a rough set of information to be operated on with the different equations used for extraction of RGB parameters. The features obtained are instrumental to classify the quality of the rice. The paper uses Color Histogram Feature alongwith Support Vector Machine to classify the themes of the image. The Color Histogram is explained in much more detail pertaining to application in this project in chapter 5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapter – 3
+GLCM FEATURE EXTRACTION
+Feature Extraction is a method of obtaining visual content of an image. It involves extraction of general features of an image such as shape, texture, color or other domain specific features. When analysing a complex set of data, such as an image, the main problem is the large number of variables that involved. These variables require a large amount of memory and computation power for performing further operations.
+Feature extraction is a general term for methods of constructing combinations of variables to avoid these problems and still provide the data with sufficient accuracy.
+3.1 Texture Analysis:
+Texture Analysis aims in finding an effective method to represent the underlying features of tectures in a unique yet simple form which can be used for further classifications and segmentation of objects. Although important, there a limited number of architectures that implement on-board textural features. In this paper, we use Gray Level Co-occurrence Matrix (GLCM) to acquire statistical texture features. A number features may be extracted from GLCM.  
+3.2 Extraction using GLCM:
+Gray-level co-occurrence matrix (GLCM) is the statistical method of examining the textures that considers the spatial relationship of the pixels. The GLCM functions characterize the texture of an image by calculating how often pairs of pixel with specific values and in a specified spatial relationship occur in an image, creating a GLCM, and then extracting statistical measures from this matrix. The graycomatrix function in MATLAB creates a    gray-level co-occurrence matrix (GLCM) by calculating how often a pixel with the intensity (gray-level) value i occurs in a specific spatial relationship to a pixel with the value j. By default, the spatial relationship is defined as the pixel of interest and the pixel to its immediate right (horizontally adjacent), but you can specify other spatial relationships between the two pixels. Each element (i, j) in the resultant GLCM is simply the sum of the number of times that the pixel with value I occurred in the specified spatial relationship to a pixel with value j in the input image. A GLCM is a matrix where the number of rows and columns is equal to the number of gray levels, G, in the image. The matrix element P (i, j | ∆x, ∆y) is the relative frequency separated by a pixel distance (∆x, ∆y). Matrix element also represented as P (i,j|d,) which contains the second order probability values for changes between gray level i and j at distance d a particular angle . Various features are extracted from GLCM, G is the number of gray levels used and  is the mean value of P,  , y ,x and  y are the means and standard deviations of Px and Py . Px(i) is the ith entry obtained by summing the rows of P(i,j):
+
+Px(i)=   and  Py(j)=                                                             (3.1)                                            
+
+ and                                                                   (3.2)
+
+(i)-(i))2                                                                                          (3.3)
+
+(j)-(i))2                                                                                                                                       (3.4)
+
+3.3 Features that can be extracted using GLCM:
+    1. Homogeneity (Angular Second Moment):
+ASM is a measure of the homogeneity of the image. A homogenous scene will  contain only a few gray levels, giving a GLCM with only a few but relatively high values of P(i,j). Thus, the sum of the squares will be high.
+
+                                  ASM = 2                                      (3.5)
+    2. Contrast:
+This measure of contrast or local intensity variation will favour contributions      from P(i, j) away from the diagonal, i.e. i ≠ j.
+                 
+                        Contrast =                           (3.6)
+
+    3. Local Homogeneity, Inverse Difference Moment (IDM):
+IDM is also influenced by the homogeneity of the image. Because of the weighting factor (1+(i−j)2)−1 IDM will get small contributions from inhomogeneous areas (i ≠ j). The result is a low IDM value for inhomogeneous images, and a relatively higher value for homogeneous images.
+
+                             IDM=                                     (3.7)
+
+    4. Entropy:
+Inhomogeneous scenes have low first order entropy, while a homogeneous scene has a high entropy.
+
+                     entropy = -                            (3.8)
+
+    5. Correlation:
+Correlation is a measure of the gray level linear dependence between the pixels at the specified positions relative to each other.
+
+                        correlation =                            (3.9)
+
+    6. Sum of Squares, Variance:
+This features puts relatively high weights on the elements that differ from the average value of P(i,j).
+                       
+                           Variance =                              (3.10)
+                          
+The general thumb rules used in the selection of the textural features can be stated as follows:
+-  ASM is preferred to entropy as its values belong to normalized range. 
+-  Contrast is associated with the average gray level difference between neighbour pixels. It is similar to variance however preferred due to reduced computational load and its effectiveness as       a spatial frequency measure. 
+- ASM (Homogeneity) and contrast are the most significant parameters in terms of visual assessment and computational load to discriminate between different textural patterns. 
+
+
+        3.4  Applications of GLCM:
+
+GLCM has been used extensively in the field of image processing. It has been applied from a range of applications like texture analysis to synthesis including gray scale as well as color texture recognition. A few of its popular applications are discussed ahead. 
+1.Texture Analysis of SAR Sea Ice Imagery 
+This application uses GLCM to quantitatively evaluate textural parameters and determine which parameter values are best for mapping sea ice textures. It is mainly used for gray-level quantization, displacement and orientation factors for representing sea ice in synthetic aperture radar (SAR) imagery.
+2.Synthesis of Textures 
+An algorithm for generating synthetic textures based on GLCM is used to imitate real textures taken from satellite images. A histogram is computed from the desired GLCM. Then an initial image that has the desired histogram is randomly generated. Further, a chain of images is iteratively produced such that the new image is improvement over the initial in terms of error of distance of current co-occurrences from desired co-occurrences. The iteration stops when the error goes below a pre-specified threshold value. The algorithm converges only if a solution exists. The difference between the real and synthetic textures is indistinguishable by the human eye, which implies that co-occurrence features are well suited for characterizing these types of images.
+
+3.Texture Defect Detection
+A combination of wavelet theory and co-occurrence matrices [Lati00] is used to detect defects in textile images. Texture defect detection can be defined as the process of determining the location and/or extent of collection of pixels in a textured image with remarkable deviation in their intensity values or spatial arrangement with respect to the background texture. The algorithm comprises of four main steps, which are decomposition of the gray level image into sub-bands, partitioning the textured image into non-overlapping sub-windows, extracting co-occurrence features and finally classifying each sub-window as defective or non-defective.
+
+4.Circular GLCM
+GLCM can be used to study the short wavelength anomalies in the Earth’s gravitational field. In this case, the GLCM textural measures use a vector that connects pairs of pixels within a kernel that is moved over the image. This is a unique method as it deals with circular features to enhance the elusive details. The vectors connect points that lie on the perimeter of circles of different radii. A mid-point algorithm is used to select the points that lay on each circle. The circle’s radius within the kernel ranges from one to a user-specified maximum size. A rose diagram is used to show the directions of the vectors in the kernel. This unique kernel is useful for the analysis of anisotropic textures. Inverse difference moment has been specifically used which yields a strong response at the central locations of the features of interest.
+
+5.Object Recognition and Matching
+This application discusses a novel method based on quantitative estimation of relations between some elementary image structures, which are represented by elements of special multidimensional co-occurrence matrices (MDCM). An image of any object can be considered as a composition of elementary structures, the elements of which carry some attributes (e.g. gray level value, gradient magnitude, orientation) and have some relations (e.g. gray level difference, relative gradient orientation). An M-dimensional co-occurrence matrix is used where each of the attributes and relations correspond to different axis of the matrix. Object is made recognizable due to the balanced presence of some specific elementary structures in it.
+
+
+
+
+
+
+
+
+Chapter - 4
+CANNY EDGE DETECTION
+The purpose of edge detection in general is to significantly reduce the amount of data in an image, while preserving the structural properties to be used for further image processing. The aim of John F. Canny (JFC) was to develop an algorithm that is optimal with regards to the following criteria:
+    1. Detection: The probability of detecting real edge points should be maximized while the probability of falsely detecting non-edge points should be minimized. This corresponds to maximizing the signal-to-noise ratio.
+    2. Localization:  The detected edges should be as close as possible to the real edges.
+    3. Number of responses: One real edge should not result in more than one detected edge.
+Canny operator is the optimum-approaching operator of the product of SNR and the location. Canny algorithm smoothes image by Gaussian filter, calculates the magnitude and direction of gray level gradient, has the non-maxima suppression on gradient magnitude, and detect and connect the edge from the candidate points by the high and low thresholds. The below figure shows the basic steps of Canny algorithm.
+
+
+
+
+
+
+
+Fig 4.1. Basic steps of canny algorithm
+
+4.1 The Canny Edge Detection Algorithm
+The algorithm runs in 5 separate steps:
+    1. Smoothing: Blurring of the image to remove noise.
+    2. Finding gradients: The edges should be marked where the gradients of the image has large magnitudes.
+    3. Non-maximum suppression: Only local maxima should be marked as edges.
+    4. Double thresholding: Potential edges are determined by thresholding.
+    5. Edge tracking by hysteresis: Final edges are determined by suppressing all edges that are not connected to a very certain (strong) edge.
+4.1.1 Smoothing
+It is inevitable that all images taken from a camera will contain some amount of noise. To prevent that noise is mistaken for edges, noise must be reduced. Therefore the image is first smoothed by applying a Gaussian filter.
+Gaussian Filter:  
+Since all edge detection results are easily affected by image noise, it is essential to filter out the noise to prevent false detection caused by noise. To smooth the image, a Gaussian filter is applied to convolve with the image. This step will slightly smooth the image to reduce the effects of obvious noise on the edge detector. The equation for a Gaussian filter kernel of size (2k+1)×(2k+1) is given by:
+                                            Hij =                               (4.1)
+Parameter σ stands for the width of the Gaussian filter, meaning smoothness. The larger σ is, the wider the frequency band of Gaussian filter is. Parametersσ can be adjusted according to the different images.
+
+4.1.2 Finding gradients 
+
+The Canny algorithm basically finds edges where the gray scale intensity of the image changes the most. These areas are found by determining gradients of the image.
+Canny operators, by first-order differential operator, calculate the gradient magnitude and direction of individual point after being smoothed out. The partial derivatives of the two directions of the point (x, y) are
+                       P (i, j)= [I (i, j +1)- I (i, j) +I (i+ 1, j+ 1)- I (i+ 1, j)]/ 2                  (4.2)
+                      P (i, j) = [I(i, j) − I(i +1, j) + I(i, j +1) − I(i +1, j +1)]/ 2                 (4.3)
+
+The gradient magnitude and direction of the point (i, j) are:
+
+                                           M(i, j)= ( )0.5                                     (4.4)
+ 
+                                             Θ(i,j)=arctan                                                  (4.5) 
+        
+M(i, j) stands for the edge strength. And the direction angle, at which M(i, j) has the local maximum reflects the direction of the edge. Then gradient magnitude should be normalized to get a global gradient magnitude. Px and Py are the gradients in the x- and y-directions respectively. 
+
+4.1.3 Non-maximum suppression
+Non-maximum suppression is an edge thinning technique. Non-Maximum suppression is applied to "thin" the edge. After applying gradient calculation, the edge extracted from the gradient value is still quite blurred. With respect to above criteria, there should only be one accurate response to the edge. Thus non-maximum suppression can help to suppress all the gradient values to 0 except the local maximal, which indicates location with the sharpest change of intensity value. The algorithm for each pixel in the gradient image is:
+    1. Compare the edge strength of the current pixel with the edge strength of the pixel in the positive and negative gradient directions.
+    2. If the edge strength of the current pixel is the largest compared to the other pixels in the mask with the same direction (i.e., the pixel that is pointing in the y direction, it will be compared to the pixel above and below it in the vertical axis), the value will be preserved. Otherwise, the value will be suppressed.
+4.1.4 Double thresholding
+After application of non-maximum suppression, the edge pixels are quite accurate to present the real edge. However, there are still some edge pixels at this point caused by noise and color variation. In order to get rid of the spurious responses from these bothering factors, it is essential to filter out the edge pixel with the weak gradient value and preserve the edge with the high gradient value. Thus two threshold values are set to clarify the different types of edge pixels, one is called high threshold value and the other is called the low threshold value. If the edge pixel’s gradient value is higher than the high threshold value, they are marked as strong edge pixels. If the edge pixel’s gradient value is smaller than the high threshold value and larger than the low threshold value, they are marked as weak edge pixels. If the pixel value is smaller than the low threshold value, they will be suppressed. The two threshold values are empirically determined values, which will need to be defined when applying to different images.
+Dual Threshold Algorithm Detection and Edge Connection:
+The traditional Canny operator, by dual threshold method, detects and connects edge points from the candidates points. It is more robust. The steps are:
+
+Step1. : Set manually the high threshold Th and low threshold Tl ;
+
+Step2. : Scan image. Choose any pixel (i, j) in the candidate edge image M calculate its gradient magnitude M(i,j). 
+ if (gradient magnitude M(i, j) >  Th ) , the point will be marked as the edge point 
+ if (gradient magnitude M(i, j) <  Tl ) , the point will be mark as non-edge point
+ if (M(i, j) is between Th and Tl) , the point will be marked as suspect, it should be further decided based on the connectivity of the edge. If the adjacent pixels are the edge points, the point will be marked as the edge points. Otherwise, as non-edge points.
+
+Step3.: Connect, through the marked Edge points and the domain relations to get the final edge detection image.
+
+
+4.2 Parameters to be considered: 
+The Canny algorithm contains a number of adjustable parameters, which can affect the computation time and effectiveness of the algorithm. 
+The size of the Gaussian filter: The smoothing filter used in the first stage directly affects the results of the Canny algorithm. Smaller filters cause less blurring, and allow detection of small, sharp lines. A larger filter causes more blurring, smearing out the value of a given pixel over a larger area of the image. Larger blurring radii are more useful for detecting larger, smoother edges – for instance, the edge of a rainbow.
+4.3 Thresholds
+The use of two thresholds with hysteresis allows more flexibility than in a single-threshold approach, but general problems of thresholding approaches still apply. A threshold set too high can miss important information. On the other hand, a threshold set too low will falsely identify irrelevant information (such as noise) as important. It is difficult to give a generic threshold that works well on all images. No tried and tested approach to this problem yet exists.
+4.4 Summary
+The Canny algorithm is adaptable to various environments. Its parameters allow it to be tailored to recognition of edges of differing characteristics depending on the particular requirements of a given implementation. In Canny's original paper, the derivation of the optimal filter led to a Finite Impulse Response filter, which can be slow to compute in the spatial domain if the amount of smoothing required is important (the filter will have a large spatial support in that case). For this reason, it is often suggested to use Rachid Deriche's infinite impulse response form of Canny's filter (the Canny–Deriche detector), which is recursive, and which can be computed in a short, fixed amount of time for any desired amount of smoothing. The second form is suitable for real time implementations in FPGAs or DSPs, or very fast embedded PCs. In this context, however, the regular recursive implementation of the Canny operator does not give a good approximation of rotational symmetry and therefore gives a bias towards horizontal and vertical edges.
+
+Chapter – 5
+COLOR HISTOGRAM
+A histogram is a graphical representation of the number of pixels in an image. In a more simple way to explain, a histogram is a bar graph, whose X-axis represents the tonal scale, and Y-axis represents the number of pixels in an image in a certain area of the tonal scale. 
+A color histogram of an image represents the distribution of the composition of colors in the image. It shows different types of colors appeared and the number of pixels in each type of the colors appeared. The relation between a color histogram and a luminance histogram is that a color histogram can be also expressed as “Three Color Histograms”, each of which shows the brightness distribution of each individual Red/Green/Blue color channel.
+Characteristics of a color histogram:
+Note that a color histogram focuses only on the proportion of the number of different types of colors, regardless of the spatial location of the colors. The values of a color histogram are from statistics. They show the statistical distribution of colors and the essential tone of an image.
+Note that in general, as the color distributions of the foreground and background in an image are different, there might be a bimodal distribution in the histogram.
+Also note that for the luminance histogram alone, there is no perfect histogram and in general, the histogram can tell whether it is over exposure or not, but there are times when you might think the image is over exposed by viewing the histogram; however, in reality it is not.
+Principles of the formation of a color histogram:
+The formation of a color histogram is rather simple. From the definition above, we can simply count the number of pixels for each 256 scales in each of the 3 RGB channel, and plot them on 3 individual bar graphs.
+In general, a color histogram is based on a certain color space, such as RGB or HSV. When we compute the pixels of different colors in an image, if the color space is large, then we can first divide the color space into certain numbers of small intervals. Each of the intervals is called a Bin. This process is called color quantization. Then, by counting the number of pixels in each of the bins, we get the color histogram of the image.
+The color histogram can be built for any kind of color space. For monochromatic images, the term intensity histogram may be used instead. For multi-spectral images, where each pixel is represented by an arbitrary number of measurements, the color histogram is N-dimensional, with N being the number of measurements taken. Each measurement has its own wavelength range of the light spectrum, some of which may be outside the visible spectrum.
+If the set of possible color values is sufficiently small, each of those colors may be placed on a range by itself; then the histogram is merely the count of pixels that have each possible color. Most often, the space is divided into an appropriate number of ranges, often arranged as a regular grid, each containing many similar color values. The color histogram may also be represented and displayed as a smooth function defined over the color space that approximates the pixel counts.
+Like other kinds of histograms, the color histogram is a statistic that can be viewed as an approximation of an underlying continuous distribution of colors values.
+Color histograms are flexible constructs that can be built from images in various color spaces, whether RGB, RG chromaticity or any other color space of any dimension. A histogram of an image is produced first by discretization of the colors in the image into a number of bins, and counting the number of image pixels in each bin. For example, a Red–Blue chromaticity histogram can be formed by first normalizing color pixel values by dividing RGB values by R+G+B, then quantizing the normalized R and B coordinates into N bins each.
+
+
+
+
+Chapter – 6
+ARTIFICIAL NEURAL NETWORKS
+6.1 Introduction of Artificial Neural Network
+An artificial neural network is an information processing paradigm that is inspired by the way biological nervous systems, such as, the brain process information. The key element of this paradigm is the novel structure of the information processing system. It is composed of a large number of highly interconnected processing elements working in union to solve specific problems. ANNs, like people learn by example. An ANN is configured for a specific application, pattern recognition or data classification, through a learning process. Learning in biological systems involve adjustments to the synaptic connections that exist between the neurons. This is true for ANN as well.
+ANN’s are a type of artificial intelligence that attempts to imitate the way a human brain works. Rather than using a digital model, in which all computations manipulate zeroes and ones, a neural network works by creating connections between processing elements, the computer equivalent of neurons. The organization and weight of the connections determine the output.
+A neural network is a massively  parallel distributed processor that has a natural propensity for storing experimental knowledge and making it available for use. It ressembles the brain in two aspects:
+    • Knowledge is acquired by the network through a learning process, and,
+    • Inter-neuron connection strengths known as synaptic weights are used to store the knowledge.
+Neural networks can also be defined as parameterized computational nonlinear algorithms for data/ signal/ image processing. These algorithms are either implemented on a general purpose computer or are built into a dedicated hardware.
+ANN thus is an information processing system. In this the elements called neurons, process the information. The signals are transmitted by the means of connection links. The link possess an associated weight, which is multiplied along with the incoming signal with any typical neural net.
+An artificial neuron is characterized by:
+    • Architecture (connection between neurons)
+    • Training or learning (determining weights on the connection)
+    • Activation function
+A simple artificial neural network is shown with two neurons (x1,x2) and one output neuron (y). The interconnected weights are given by w1 and w2. An artificial neuron is a p-input single –output signal-processing element, which can be thought of as a simple model of non-branching biological neuron. In the figure various inputs to the network are represented by the mathematical symbol x(n). Each of these inputs are multiplied by a connection weight. These weights are represented by w(n). In the simplest case, these products are simply summed, fed through a transfer function to generate a result, and then delivered as output.
+6.2 Why Artificial Neural Networks?
+The long course of evolution has given the human brain many desirable characteristics not present in Von Neumann or modern parallel computers. These include:
+    • massive parallelism,
+    • distributed representation and computation,
+    • learning ability,
+    • generalization ability,
+    • adaptivity,
+    • inherent contextual information processing,
+    • fault tolerance, and
+    • low energy consumption.
+It is hoped that devices based on biological neural networks will possess some of these desirable characteristics. Modern digital computers outperform humans in the domain of numeric computation and related symbol manipulation. However, humans can effortlessly solve complex perceptual problems (like recognizing a man in a crowd from a mere glimpse of his face) at such a high speed and extent as to dwarf the world’s fastest computer. Why is there such a remarkable difference in their performance? The biological neural system architecture is completely different from the von Neumann architecture. This difference significantly affects the type of functions each computational model can best perform.
+Numerous efforts to develop “intelligent” programs based on von Neumann’s centralized architecture have not resulted in general-purpose intelligent programs. Inspired by biological neural networks, ANNs are massively parallel computing systems consisting of an extremely large number of simple processors with many interconnections. ANN models attempt to use some “organizational” principles believed to be used in the human brain.
+Other advantages include:
+    • Adaptive learning:
+An ability to learn how to do tasks based on the data given for training or initial experience.
+    • Self-Organization: 
+An ANN can create its own organization or representation of the information it receives during learning time. 
+    • Real-Time operations: 
+ANN computations can be carried out in parallel, using special hardware devices designed and manufactured to take advantage of this capability.
+    • Fault tolerance via redundant information coding:
+Partial destruction of a network leads to a corresponding degradation of performance. However, some network capabilities can be maintained even after major network damage due to this feature.
+6.3 Basic building blocks of artificial neural networks:
+    • Network architecture
+    • Setting the weights 
+    • Activation function
+
+
+ 6.3.1 Network Architecture
+The arrangement of neurons into layers and the pattern of connection within and in-between layer are generally called as the architecture of the net. The neurons within the layer are found to be fully interconnected or not interconnected. The number of layers in the net can be defined to be the number of the layers of weighted interconnected links between the particular slabs of neuron. If two layers of interconnected weights are present, then it is found to have hidden layers. There are various types of network architectures: Feed forward, Feedback, interconnected net, competitive net, etc. Artificial neural networks come in many different shapes and sizes. In Feed forward architectures, the activations of the input units are set and then propagated through the network until the values of the output units are determined. The network acts as a vector valued function taking one vector on the input and returning another vector on the output. 
+6.3.1.1 Feed forward net
+Feed forward network may have a single layer of weights where the inputs are directly connected to the outputs, or multiple layers with the intervening sets of hidden units. Neural networks use hidden units to create internal representations of the input patterns. Infact it has been show that given enough hidden units, it is possible to approximate arbitrarily any function with a simple feed forward network. 
+
+Single layer net: It is a feed forward net. It has only one layer of interconnections. The input units may be connected fully to the output units. But there is a chance that none of the output units and input inputs are connected with the other output and input units. In a single layer net, the weights from one output unit do not influence the weights for other units. In a single layer net the weights from one output unit do not influence the weights for other output units.
+Multi-layer net:It is also a feed forward net i.e., the net where the signals flow from the input to the output units in a forward direction. The multi-layer net pose one or more layers of nodes between the input and output units. This is advantageous over single layer net in the sense that, it can be used to solve more complicated problems.
+
+6.3.1.2 Competitive net
+The competitive net is similar to the single layer feed fprward network except that there are connections, usually negative, between the output nodes. Because these combinations the output nodes tend to compete to represent the present input pattern. Sometimes the output layer is completely connected and sometimes the connections are restricted to units that are close to each other. With an appropriate learning algorithm the latter type of network can be made to organize itself topologically. In this neurons near each other represent similar input patterns. Networks of this kind have been used to explain the formation of topological maps that occur in any animal sensorysystems including vision, audition, touch and smell.
+6.3.1.3 Recurrent net
+The fully recurrent network is perhaps the simplest neural network architectures. All units are connected to all other units and every input is both an input and output. Typically, a set of patterns is instantiated on all of the units, one at a time. As each patterns are instantiated the weights are modified. When a degraded verdion of one of the patterns is presented, the network attempts to reconstruct the pattern.
+Recurrent networks are also useful in that they allow the networks to sequentially 
+process information. Processing in recurrent networks depends on previous inputs            Fig 6.1. A taxonomy of feed-forward and recurrent/feedback network architectures
+
+6.3.2. Setting the weights
+The method of setting the value for the weights enables the process of learning or training. The process of modifying the weights in the connection between the network layers with the objective of achieving the expected output is called learning. Three types of learning are:
+    • Supervised  training: It is a process of providing the network with a series of sample input and comparing the output with the expected responses. The training continues until the network is able to provide output vectors. The weights may then be adjusted according to the learning algorithm. 
+In a logical circuit, we might have the target output as ‘+1’, if the necessary logic condition is satisfied, or ‘-1’, if not satisfied. This training is associated with pattern association as well. If a neural network is trained to associate a set of input vectors with a corresponding set of output vectors, then it is called associative memory set. If the output is the same as the input, it forms auto-associative memory, if the output is different from input it is hetero associative.
+
+    • Unsupervised training: In a neural network, if for the training input vectors, the target output is not known, the training method is unsupervised training. The net may modify the weight so that the most similar input vector is assigned to the same output unit. These are far more complex and difficult to implement. It involves looping connections back into feedback networks and iterating through the process until some sought of stable recall can be achieved. This is adopted in case of self-featuring maps, adaptive resonance theory, etc. The training process extracts the statistical properties of the training set and groups similar vectors into classes.
+
+    • Reinforcement training: In this network is only presented with an indication of whether the output answer is right or wrong. The network must then use this information to prove its performance. This is a very large general approach that can be applied when the knowledge required to apply supervised learning is not available. The output in this case may not be represented as the desired output, but the condition whether it is ‘success’ or ‘failure’ may be indicated. Based on this the error may be calculated and the training process may be continued. The error signal produced here is binary. This method of learning attempts to learn the input-output mapping through trial and error with a view to maximize the performance index called the reinforcement signal.
+6.3.3 Activation function
+The activation function is used to calculate the output response of the neuron. The sum of the weighted input signals is applied with an activation to obtain the response. For neurons in same layer, same activation functions are used. There may be linear as well as non-linear activation functions.
+Identity function: The function is given by,
+                                              f(x) = x; for all x.                                                        (6.1)                                                  
+                             
+Fig 6.2. Response of identity function
+Binary step funtion:
+The function is given by,
+                                         f(x)= 1; if f(x) ≥θ                                                             (6.2)
+                                               = 0; if f(x) ≤θ
+Mostly single layer nets use binary step function for calculating the output from the net input. This is also called the threshold function.
+Sigmoidal function:
+These functions are usually S shaped curves. The hyperbolic and logistic functions are commonly used. These are used in multilayer nets like backpropagation network, radial basis function network, etc.
+Binary Sigmoidal function:
+This is also called logistic function. It ranges between 0 to 1.
+                                                      f(x)=                                                  (6.3)
+where, σ is called steepness parameter.
+
+     Fig 6.3. Sigmoidal function used in multi layer feed forward network
+ 
+6.4 Feed Forward Networks
+One can differentiate between two basic types of networks, networks with feedback and those without. In networks with feedback, the output values can be traced back to the input values. However there are networks where in for every input network laid on the network, an output network is calculated and this can be read from the output neurons. There is no feedback. Hence only, a forward flow information is present. Networks having the this structure is called as feed forward networks.
+The development of layered feed-forward networks began in the late 1950's, represented by Rosenblatt's perceptron and Widrow's ADaptive LINear Element (ADLINE). Single layer perceptrons can only solve linearly separable problems. The limitations of the single layer network has led to the development of multi-layer feed-forward networks with one or more hidden layers, called multi-layer perceptron (MLP) networks. MLP networks overcome many of the limitations of single layer perceptrons, and can be trained using the backpropagation algorithm. The backpropagation technique was invented independently several times. To date, backpropagation networks are the most popular neural network model and have attracted most research interest among all the existing models.
+6.4.1 Single layer perceptron
+
+A single layer perceptron is the simplest form of neural networks used for classification of patterns that linearly separable. Fundamentally, it consists of a single neuron with adjustable weights and bias. Rosenblatt found that if the patterns used to train the perceptron are drawn from two linearly separable classes, the perceptron algorithm converges and positions the decision surface in the form of a hyperplane between the two classes. The perceptron built around a single neuron is limited to perform pattern classification with only two classes and they have to be linearly separable for the perception to work properly. The basic model of a perceptron capable of classifying a pattern into one of two classes is shown in Fig 6.4.
+
+                                                                                                                                                                                                                                                                                                                                       
+             Fig 6.4. A simple perceptron model
+
+The machine consists of an array S of sensory units which are randomly connected to a second array A of associative units. Each of these units produces an output only if enough of the sensory units which are connected to it are activated, that is, the output signals of the associative units are binary. The sensory units can be viewed as the means by which the machine receives stimuli from its external environment. The outputs of the associative units are the input to the perceptron. The response of the machine is proportional to the weighted sum of the outputs of the associative units; i.e., if xi denotes the output signal of the ith associative unit and wi the corresponding weight, the response is given by
+                                    
+                                                          r                                                (6.4)
+                                                                                               
+and this response signal is passed through a hard limiting non-linearity to produce the output of the machine.
+                                                         y = +1 if r                                                  (6.5)                                
+                                                            = -1 if r < 0
+                                                     
+An effective technique for analysing the behaviour of the perceptron network shown in Fig. 1 is to plot a map of the decision regions created in the multidimensional space spanned by the input variables. The perceptron network forms the decision regions separated by a hyperplane defined by
+                                                                                                           (6.6)                                                                           
+The Perceptron training rule
+The precise learning problem is to determine a weight vector that causes the perceptron to produce the correct ±1 output for each of the given training samples. Several algorithms are known to solve this learning problem, here we consider: the perceptron rule and the delta rule. These two are guaranteed to converge to somewhat different acceptable hypotheses, under somewhat different conditions. One way to learn an acceptable weight vector is to begin with random weights, then iteratively apply the perceptron to each training sample, modifying the perceptron weights whenever it misclassifies an example. This process is repeated iterating through the training examples as many times as needed until the perceptron identifies all the training examples correctly. Weights are modified at each step according to the perceptron training rule, which revises the weight wi associated with the input xi according to the rule,
+                                                            wi←wi+Δwi                                      (6.7)
+
+where,
+                                                           Δwi  = η(t-o)xi                                                                        (6.8)
+Here t is the target output for the current training sample, o is the output generated by the perceptron, and η is the positive constant called the learning rate. The role of the learning rate is to moderate the degree to which the rates are changed at each step. It is usually set to small value and is sometimes made to decay as the number of weight tuning iterations increases. Suppose the training example is correctly classified by the perceptron. In this case, (t-o) is zero, making Δwi zero, so that no weights are updated. Suppose the perceptron outputs a +1 instead of -1 , in this case, the weights must be altered to  increase  the  values   of   . In fact, the above learning procedure  can 
+be proven to converge within a finite number of applications of the perceptron training rule to a weight vector that correctly classifies all training examples.
+
+6.4.2 Multi-layer feed forward network
+
+The figure shows a typical three-layer perceptron. In general, a standard L-layer feed-forward network consists of an input stage, (L-1) hidden layers, and an output layer of units successively connected (fully or locally) in a feed-forward fashion with no connections between units in the same layer and no feedback connections between layers.
+
+                     
+                                      Fig 6.5. A three layer feed forward network
+Multilayer perceptron
+The most popular class of multilayer feed-forward networks is multilayer perceptrons in which each computational unit employs either the thresholding function or the sigmoid function. Multilayer perceptrons can form arbitrarily complex decision boundaries and represent any Boolean function. The development of the back-propagation learning algorithm for determining weights in a multilayer perceptron has made these networks the most popular among researchers and users of neural networks. We denote wij(1)  as the weight on the connection between the ith unit in layer (2-1) to jth unit in layer 1. Let {(x(1),d(1)), (,(x(2),d(2)), (x(3),d(3)). . , (x(p),d(p)) } be a set of p training patterns (input-output pairs), where x(i) ϵ Rn is the input vector in the n-dimensional pattern space, and d(i) ϵ [0,1]m an m-dimensional hypercube. For classification purposes, m is the number of classes. The squared error cost function most frequently used in the ANN literature is defined as
+
+                                             E = 2                                              (6.9)
+
+The back-propagation algorithm is a gradient-descent method to minimize the squared-error cost function. A geometric interpretation can help explicate the role of hidden units (with the threshold activation function). Each unit in the first hidden layer forms a hyperplane in the pattern space; boundaries between pattern classes can be approximated by hyperplanes. A unit in the second hidden layer forms a hyperregion from the outputs of the first-layer units; a decision region is obtained by performing an AND operation on the hyperplanes. The output-layer units combine the decision regions made by the units in the second hidden layer by performing logical OR operations. Remember that this scenario is depicted only to explain the role of hidden units. Their actual behavior, after the network is trained, could differ. Moreover, multilayer perceptrons with sigmoid activation functions can form smooth decision boundaries rather than piecewise linear boundaries.
+Multi-layer networks overcome many of the limitations of single layer networks, but were generally not used in the past (before mid 1980s) because an effective training algorithm was not available. With the publication of the backpropagation training algorithm by Rumelhart, Hinton and Williams in the mid-1980's, multi-layer feedforward networks, some times called multi-layer perceptron (MLP) networks have become a mainstay of neural network research. The capabilities of multi-layer networks stem from the non-linearities used with the units. Each neuron in the network receives inputs from other neurons in the network, or receives inputs from the outside world. The outputs of the neurons are connected to other neurons or to the outside world. Each input is connected to the neurons by aweight. The neuron calculates the weighted sum of the inputs (called the activation), which is passed through a non-linear transfer function to produce the actual output for the neuron. The most popular non-linear transfer function is of the sigmoidal type. A typical sigmoid function has the form:
+                                                   f(x) =                                                         (6.10)
+
+The introduction of one hidden layer allows the network to represent an arbitrary Boolean function, and the use of two hidden layers allows the network to represent an arbitrary decision space. The hidden units also enable networks to automatically represent geometrical invariance such as translation invariance. 
+
+6.4.3 Back Propogation network (BPN)
+
+A theorem which states that the backpropagation network is able to implement any function of practical interest to any desired degree of accuracy was proven by Hecht- Nielsen and is expressed below. 
+
+Backpropagation Network Function Approximation Theorem:
+Given any ϵ0 and any L2 function f : [0,1]N →RM, there exists a three-layer (with two hidden layers) backpropagation network that can approximate f to within mean squared error accuracy.
+ 
+The above theorem guarantees the ability of a multi-layer network with the correct weights to accurately implement an arbitrary L2 function. It does not state how the
+weights should be selected or even whether these weights can be found using existing network learning algorithms. Notwithstanding the fact that the backpropagation networks are not guaranteed to be able to find the correct weights for any given task, they have found numerous applications in a variety of problems. Sejnowski and Rosenberg have demonstrated that backpropagation networks can learn to convert text to realistic speech. Burr has shown that backpropagation networks can be used for recognition of spoken digits and hand-written characters with excellent performance. Backpropagation networks can also be used for data compression by forcing the output to reproduce the input for a network with a lower-dimensional hidden layer, and many more …
+
+The kind of multilayer networks learned by the backpropagation algorithm are capable of expressing a rich of variety of non-linear decision surfaces. However, multiple layers of cascaded linear units still produce only linear functions, and we prefer networks capable of representing highly non-linear functions. The perceptron unit is another possible choice, but its discontinuous threshold makes it undifferentiable and hence unsuitable for gradient descent. One solution is the sigmoid unit- a unit very much like a perceptron , but based on a smoothed, differentiable threshold function of its input.
+                                            Fig 6.6. A sigmoid threshold unit
+
+The backpropogation algorithm learns the weight for a multilayer network, given a fixed set of units and interconnections. It employs gradient descent t attempt to minimize the squared error between the network output values and the target values for these output. Redefining E to the sum of errors all of the network output units 
+                            
+                                   E(0.5                               (6.11)
+
+where outputs is the set of output units in the network, tkd and okd are the target and the output values associated with the kth output unit and training example d. 
+
+    • Create a feed forward network with nin inputs, nhidden  hidden units and nout output units.
+    • Initialize all network weights to small random numbers.
+    • Until the termination condition is met.
+    • For each in training examples, do
+                             Propagate the input forward through the network
+    1. Input the instance  to the network and compute the output ou of every unit u in the network
+     Propagate the error backward through the network 
+    2. For each network output unit k, calculate its error δk 
+                                    δk ← ok(1- ok)(tk- ok)                                                 (6.12)
+
+    3. For each hidden unit hm calculate its error term δh
+                          δh ← oh(1- oh)                                      (6.13)      
+    4. Update each network weight wji,
+                    wji← wji +  Δwji                                                                                    (6.14)
+           where,
+                                                  Δwji = η δj xji                                                                    (6.15)
+
+6.4.3.1. Selection of parameters
+For the efficient operation of the back propagation network it is necessary for the appropriate selection of the parameters used for training.
+
+Initial Weights:
+It will influence whether the net reaches a global minima of the error and if so how rapidly it converges. If the initial weight is too large the initial input signals to each hidden or output unit will fall in the saturation region where the derivative of the sigmoid has a very small value. If initial weights are too small, the net input to a hidden or output unit will approach zero, which then causes extremely slow learning. To get the best result the initial weights are set to random numbers between -0.5 to 0.5 or between -1 and 1. 
+
+Selection of Learning Rule:
+A high learning rate leads to rapid learning but the weights may oscillate, while a lower learning rate leads to slower learning. Methods suggested for adopting learning rate are as follows:
+i) Start with a high learning rate and steadily decrease it. Changes in the weight vector may be small in order to reduce oscillations or any divergence.
+ii) A simple suggestion is to increase the learning rate in order to improve performance and to decrease the learning rate in order to worsen the performance.
+
+iii) Another method is to double the learning rate until the error value worsens.
+
+6.4.3.2 Learning in Back Propagation
+There are two types of learning:
+    i) Sequential learning or pre-pattern method
+    ii) Batch learning or pre-epoch method
+In sequential learning a given input pattern is propagated forward, the error is determined and back propagated, and the weights are updated.
+In batch learning the weights are updated only after the entire set of training network has been presented to the network. Thus the weight update is only performed after every epoch.
+If p=patterns in one epoch, then
+                                                  
+                                                     Δw =                                             (6.16)
+
+How long should we train a net?
+The motivation for applying back propagation algorithm net is to achieve a balance between memorization and generalization; it is necessarily advantageous to continue training until the error reaches a minimum value. The two disjoint sets of data used during training are:
+ 
+i) set of training patterns
+ii) set of training-tetsing patterns 
+The weight adjustments are based on the training patterns. Whenever the error begins to increase, the net is starting to memorize the training patterns. At this point the training is terminated.
+
+Number of training pairs
+The number of training pairs is also plays an important role during training of nets. A simple thumb rule is used to find the number of training pairs.
+Consider a net trained to classify the fraction 1-(e/2) of the trained patterns correctly. This means it will also classify (1-e) of the testing pattern correctly by using the following condition.
+If there are enough training patterns the net will be able to generalize as desired. Enough training pattern is given by w/p=e, where 
+p= number of training patterns
+w=number of weights to be trained
+the value of ‘e’ lies between 0 and 1/8. The necessary condition is given by
+                                       p                                                                             (6.17)
+where, a= expected accuracy for the test set.
+
+Number of Hidden Units
+If the activation functions can vary with the function, then it can be seen that a n-input, m-output function requires at most 2n+1 hidden units. If more number of hidden layers are present, then the calculation for the δ’s are repeated for each additional hidden layer presents, summing all the δ’s for units present in the previous layer that is fed into the current layer for which δ is being calculated.
+
+
+6.4.3.2  Merits and Demerits of Back Propagation Algorithm
+Merits:
+    1. The mathematical formula present here, can be applied to any network and does not require any special mention of the features of the function to be learnt.
+    2. The computing time is reduced if the weights chosen are small at the beginning.
+    3. The batch update of weights exist, which provides a smoothing effect on the weight correction terms.
+Demerits:
+    1. The number of learning steps may be high, and also the learning phase has intensive calculations.
+    2. The selection of number of hidden nodes is a problem. If number of hidden neurons is small, then the function to be learnt may not be possibly represented, as the capacity of the network is small. If the number of hidden neurons is increased, the number of independent variable of the error function also increases and the computing also increases rapidly.
+    3. For complex problems it may take days to train the network or it may not train at all.
+    4. The training may sometimes cause temporal instability to the system.
+
+6.5 Summary 
+
+ANN learning provides a practical method for learning real valued and vector valued functions over continuous and discrete valued attributes, in a way that is robust to noise in the training data. The back propagation algorithm is the most common network learning method. 
+Feed forward networks containing three layers of units are able to approximate any function to arbitrary accuracy, given a sufficient number of units in each layer. Back propagation searches the space of possible hypotheses using gradient descent to iteratively reduce the error in the network fit to the training examples. Overfitting the training data is an important issue in the ANN training. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapter – 7
+PROJECT FLOW
+
+Step 1: Collect database
+Images of known rice samples are captured and stored in the training database.
+
+Step 2: Feature extraction
+For variety detection: Images are preprocessed. Here images are gray-scaled and resized. Features are extracted from the training images using GLCM ( for texture) and Canny edge detection (for shape).
+For quality estimation: Here R,G,B color components are extracted using color histogram.
+                 
+                  
+Fig 7.1 Creating database
+
+Step 3: Creating Database
+The extracted features are stored in a database, features.dat
+
+Step 4: ANN Training
+The artificial neural network (ANN) is trained according to the extracted features stored in features.dat. The weights are set and relative data is stored in net_FFBP.mat, which is further used during classification.
+
+Step 5: Select query image
+Image of the rice sample we wish to identify is selected from the test folder as input to the program.
+ 
+                                                    
+Fig 7.2 GUI
+
+Step 6: Feature extraction
+The same process as in step 2 is carried out and the features are stored in testfeature.dat.
+
+Step 7: Classification
+The values from testfeature.dat are used to create a linear model on the basis of weights from the net_FFBP.mat.
+The output is determined after analysing the most resembling linear model within some specific range.
+
+Step 8: Display Result
+The type of the rice is displayed, if the ANN is unable to classify a message saying ‘Cant classify’ is displayed.
+
+
+
+
+
+
+
+
+Chapter – 8
+RESULTS
+8.1. Original image
+ The image is taken using a competent digital camera. The image of the grains has to be captured from a fixed distance.
+     
+        
+Fig 8.1. Original image
+
+8.2. Resized Gray Scale Image
+This process transforms a colored image into a gray image.This process transforms a colored image into a gray image. This is performed as it is easy to operate on gray image rather than RGB image, during feature extraction.
+     
+Fig 8.2. Resized gray image
+
+8.3. Canny Edge Detection
+8.3.1. Gradient Magnitude Image
+
+Fig 8.3. Edges after finding gradient magnitudes
+
+8.3.2. Non-Maximum Suppression
+
+Fig 8.4. Edges after non-maximum supression
+
+
+8.3.3. Edge Tracking by Hysteresis
+
+Fig 8.5. Edges after hysteresis
+
+8.3.4.  Canny Edge Detected Image
+Canny Edge detection is carried out on the gray scaled image to obtain the shape features of the input image. 
+  
+
+
+
+
+
+      
+Fig 8.6. Canny edge detected image
+
+
+
+
+
+
+
+
+
+
+
+8.4. NN Training Tool
+             
+
+           
+Fig 8.7. ANN training tool
+
+
+
+
+
+
+8.5. Performance Plot
+         
+Fig 8.8. Performance plot
+8.6. Training State
+
+Fig 8.9. Training plot
+
+8.7. Regression
+
+Fig 8.10. Regression plot
+
+8.8. Output Window
+
+                                           
+Fig 8.11. Output window
+
+8.9 Results for Quality Estimation
+
+8.9.1. Color Histogram
+
+
+
+
+
+Fig 8.12. Color histogram plot
+
+
+
+
+
+
+8.9.2. NN Training Tool
+
+             
+Fig 8.13. NN training tool
+
+
+
+
+
+8.9.3. Performance Plot
+
+Fig 8.14. Performance plot
+8.9.4. Training State
+
+Fig 8.15. Training plot
+
+8.9.5. Regression State
+
+Fig 8.16 Regression Plot
+
+8.9.6. Output Window
+                              
+                             
+Fig 8.17 Output window
+
+Chapter - 9
+CONCLUSION
+Rice Grain Variety Detection and Quality Estimation is an important application surrounded in the field of agriculture. Agricultural countries like India are mainly dependent on farming for development and growth of the country and hence technology should be used in an efficient way to augment the agricultural production and distribution. The detection of rice variety using Image Processing involves methodologies that are combined to provide a satisfactory results. 
+The initial stage of the project is to train the neural network on the basis of features extracted from training set of images. The weights are set and neural network is ready for classification. The input image is pre-processed using gray-level transformation and resizing functions available in MATLAB. These operations are done to acclimate the input image so that features extraction is easier. The shape features are extracted using Canny-Edge Detection, which has been accepted as standard for edge detection worldwide and is used in most research applications. The texture features are extracted by forming a Gray-Level Co-occurrence Matrix (GLCM), following which features required for analysis are calculated from the Matrix. These two feature extraction operations are carried out on gray-level resized images. The features extracted are stored in a database which are then used to classify the grain using the Trained Neural Network. The Neural Network has a large variety of algorithms; in our project, we make use of Feed Forward Network using Back Propagation. The trained neural network is capable of classifying the variety of the rice on its own. 
+The other part of the project is Quality Estimation. This part, although relevant, demands a different feature base for classification. The classification procedure is same as before, we train the images in similar fashion. The only difference lies in the features extracted. Here, we use color histogram feature extraction to obtain most discernible features. Based on these features, we train the neural network as before. Another main distinguishing factor in these two applications, is that the color histogram has to be carried out on RGB image, hence, we omit Gray-scaling of the image during pre-processing. Only resizing is done on the images. 
+The use of technology can hence help the agricultural sector in many ways, and our project presents one of the ways to do this.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Chapter - 10
+FUTURE SCOPE
+In India, Agricultural sector is a spectrum where there is a dire need of upliftment which can be accomplished by dedicated use of technology. The past few years have seen a lot of advances in the same domain. Our project uses Image Processing for Detection of varieties of rice and their Quality of the Rice Granules.
+Building up over the same concept presented in our project, there can be various imaginable implementations. One of those can be to detect if a particular rice sample has mixed varieties of rice. This will require a much more complex algorithm but is very useful to confirm that the entire batch of rice is of a single type. Another such application on the same grounds can be to affirm that the rice is unadulterated, i.e. there are no stones, grains or other such particles added.
+After careful modification of the algorithm, one usage can be to identify the percentage of rice that has degraded. This can be prevent exploitation of vendors or consumer who have limited knowledge about the rice or any other grains.
+Further range of uses involves enhancing the database to accommodate varied grains, and their corresponding quality ranges. For detection and identification of other grains in the same platform, the algorithm also needs to be modular enough, alongwith the database.
+   
+
+
+
+
+
+
+
+
+REFERENCES
+
+[1] Abirami S, Neelamegam P, Kala H. “Analysis of Rice Granules using Image Processing and Neural Network Pattern Recognition Tool”, International Journal of Computer Applications, June 2014.
+[2] P Mohanaiah, P Sathyanarayana, L GuruKumar.” Image Texture Feature Extraction using GLCM Approach”, IJSRP Vol.3 Issue 5, May 2013. 
+[3] S N Sivanandam, S Sumathi, S N Deepa. “Introduction to Neural Networks using MATLAB 6.0”, Tata McGraw Hill Education Private Limited, June 2002.
+[4] John Canny. “A computational approach to edge detection. Pattern Analysis and Machine Intelligence”, IEEE, Nov. 1986.
+[5] A.K. Jain and J. Mao, “Neural Networks and Pattern Recognition,”in Computational Intelligence: Imitating Life, J.M. Zurada, R. J. Marks 11, and C.J. Robinson, eds., IEEE Press, Piscataway, N.J., 1994, pp. 194-212.
+[6] Zhen-Guo Che, Tzu-An Chiang and Zhen-Hua Che, “Feed Forward Neural Network Training: A Comparision between Genetic Algorithm and Back Propagation Learning Algorithm”, International Journal of Innovative Computing, Information and Control ICIC International 2011 ISSN 1349-4198, Volume 7, Number 10, October 2011
+[7] Shailendra Singh. “RGB Color Histogram Feature based Image Classification”, Samsung India Software Center, Noida, India
+
+
+
+
